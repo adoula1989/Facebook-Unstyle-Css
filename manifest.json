@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Facebook Unstyle",
+  "version": "1.0.0",
+  "description": "Facebook Unstyle",
+  "permissions": [
+    "tabs",
+	"https://web.facebook.com/*",
+    "http://www.facebook.com/*",
+    "https://www.facebook.com/*"
+  ],
+  "icons": {
+    "48" : "ff.png",
+    "128" : "ff.png"
+  },
+  "content_scripts" : [
+    {
+      "matches": ["http://www.facebook.com/*", "https://www.facebook.com/*", "https://web.facebook.com/*"],
+      "js": ["rendred.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
